@@ -31,5 +31,5 @@ preview_latex () {
 }
 
 source ~/.git-completion.bash
-source ~/.bash_prompt
+source ~/.prompt.bash
 #source /etc/bashrc
