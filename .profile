@@ -11,7 +11,10 @@ export PATH=/Users/enjalot/code/install/docco/bin:$PATH
 
 alias 'sshe'='ssh enjalot@enja.org'
 alias 'sshtrib'='ssh ubuntu@23.21.158.201 -i ~/.ssh/enjalot_tributary.pem'
+alias 'sshoa'='ssh ubuntu@107.22.225.160 -i ~/.ssh/enjalot_tributary.pem'
 alias 'sshm'='ssh ubuntu@50.16.223.147 -i ~/.ssh/enjalot_tributary.pem'
+
+alias 'pss'='python -m SimpleHTTPServer'
 
 alias 'vim'='mvim -v'
 
@@ -31,5 +34,5 @@ preview_latex () {
 }
 
 source ~/.git-completion.bash
-source ~/.bash_prompt
+source ~/.prompt.bash
 #source /etc/bashrc
