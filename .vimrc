@@ -1,12 +1,14 @@
 syntax on
 set et
-set sw=4
-set tabstop=4
+set sw=2
+set tabstop=2
 set smarttab
 set noautoindent
 set number
+set hidden
 
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
 
 "makes underscore separate words (so w stops on underscore)
 set iskeyword-=_
@@ -32,11 +34,13 @@ au BufNewFile,BufRead *.cl set filetype=cpp
 au FileType c,cl,cpp source ~/.vim/opencl.vim
 
 "CoffeeScript
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow 5 | redraw!
+au BufWritePost *.coffee silent CoffeeMake! -b -p | cwindow 5 | redraw!
 
 "JS
 au FileType js,coffee,node set cindent
 
+"STYLUS
+au BufNewFile,BufRead *.styl set filetype=css
 
 "turn off stupid imap <C-j> hogging
 "imap <C-space> <Plug>IMAP_JumpForward
@@ -58,6 +62,7 @@ set smartcase
 "set incsearch
 "set showmatch
 set hlsearch
+hi Search ctermbg=Blue
 
 "colorscheme tir_black
 "colorscheme desert256

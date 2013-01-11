@@ -1,10 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/enjalot/code/visually/admin/static/lib/charts/src/dotcontinent'
-let g:netrw_dirhist_2='/Users/enjalot/code/visually/apiproxy/node_modules/data-reader/lib/data-reader/facebook'
-let g:netrw_dirhist_3='/Users/enjalot/code/visually/admin/static/lib/charts/src/unit'
-let g:netrw_dirhist_4='/Users/enjalot/code/visually/beta/static/lib/templates/twitter/hashtag/themes/03_highlighter'
-let g:netrw_dirhist_5='/Users/enjalot/code/visually/admin/static/coffee'
-let g:netrw_dirhist_6='/Users/enjalot/code/visually/beta/backend/data-api/vendor/data-reader/lib/data-reader/facebook'
-let g:netrw_dirhist_7='/Users/enjalot/code/d3/tributary/static/css'
-let g:netrw_dirhist_8='/Users/enjalot/code/d3/bayd3/costofliving/Template1'
+let g:netrw_dirhist_cnt =0

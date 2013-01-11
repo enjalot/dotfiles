@@ -1,5 +1,9 @@
 *.swp
 *.un~
-node_modules
+*.swo
 .DS_Store
+build/
+*.lock-wscript
+
+
 
