@@ -17,6 +17,9 @@ set clipboard=unnamed
 
 call pathogen#infect()
 
+"remap autocomplete cycling
+"inoremap ` <C-n>
+
 "set nocompatible " Disable vi-compatibility
 set laststatus=2 " Always show the statusline
 
@@ -41,6 +44,11 @@ au FileType js,coffee,node set cindent
 
 "STYLUS
 au BufNewFile,BufRead *.styl set filetype=css
+"LESS
+au BufNewFile,BufRead *.less set filetype=css
+"HANDLEBARS
+au BufNewFile,BufRead *.handlebars set filetype=html
+
 
 "turn off stupid imap <C-j> hogging
 "imap <C-space> <Plug>IMAP_JumpForward
