@@ -10,7 +10,7 @@ export PATH=/Users/enjalot/code/install:$PATH
 #docco
 export PATH=/Users/enjalot/code/install/docco/bin:$PATH
 
-#alias 'ssh'='~/dotfiles/sshcolor.bash'
+##alias 'ssh'='~/dotfiles/sshcolor.bash'
 
 alias 'sshe'='ssh enjalot@enja.org'
 alias 'sshtrib'='ssh ubuntu@tributary.io -i ~/.ssh/enjalot_tributary.pem'
@@ -51,7 +51,7 @@ source ~/.git-completion.bash
 source ~/.prompt.bash
 
 #tmux recovery script
-alias 'tlever'='tmux-session new lever.lnode lever.hub lever.solr lever.passthru lever.watch lever.explore; tmux attach -t lever'
+alias 'tlever'='tmux-session new lever.lnode lever.hub lever.solr lever.passthru lever.watch lever.explore lever.prome; tmux attach -t lever'
 alias 'ttrib'='tmux-session new tributary.server tributary.watch; tmux attach -t tributary'
 
 #mac os x doesn't have cat
