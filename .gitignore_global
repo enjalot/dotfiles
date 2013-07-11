@@ -1,6 +1,7 @@
 *.swp
 *.un~
 *.swo
+*.swn
 .DS_Store
 build/
 *.lock-wscript
