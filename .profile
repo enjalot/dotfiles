@@ -44,6 +44,15 @@ alias 'lmongodump'='~/lever/downloads/mongodb-osx-x86_64-2.2.1/bin/mongodump'
 alias 'lsolr'='cd ~/lever/downloads/solr-4.2.1/example/; java -jar start.jar'
 alias 'lnode'='cd ~/lever/ats;NODE_ENV=development AWS_ACCESS_KEY=AskSomeone AWS_SECRET=AskSomeone node server.js'
 
+alias 'sl'='cd ~/lever/chef-repo;knife ec2 server list'
+alias 'lv'='cd ~/lever/cloud/dev;vagrant ssh'
+alias 'tailall'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -iP -t0 -h /dev/stdin sudo tail -fn 100 /var/log/lever/hire.log"
+alias 'tailallupload'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -iP -t0 -h /dev/stdin sudo tail -fn 300 /var/log/lever/upload.log"
+
+alias 'grepallupload'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -iP -t0 -h /dev/stdin sudo grep -irn '$1' /var/log/lever/upload.log"
+
+#knife ssh -E prod 'role:frontend' grep -irn -C 40 "cdb3768a-5835-4b91-811c-20c1f5157f10" /var/log/lever/upload.log
+
 #ssh related settings
 ssh-add ~/.ssh/id_enj_mba
 ssh-add ~/.ssh/lever-ec2

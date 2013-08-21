@@ -1,10 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/enjalot/lever/search/profiles/data/index'
-let g:netrw_dirhist_2='/Users/enjalot/lever/hire/src/web/components/reactionsChart'
-let g:netrw_dirhist_3='/Users/enjalot/lever/hire/src/web/components/assign'
-let g:netrw_dirhist_4='/Users/enjalot/lever/components/barlabels'
-let g:netrw_dirhist_5='/Users/enjalot/lever/hire/src/extension/linkedIn'
-let g:netrw_dirhist_6='/Users/enjalot/lever/data/test/fixtures'
-let g:netrw_dirhist_7='/Users/enjalot/lever/hire/src/web/components/eachEditable'
-let g:netrw_dirhist_8='/Users/enjalot/lever/hire/src/web/components/profileReaction'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/enjalot/lever/hire/node_modules/lever-data/node_modules/solr-client'
+let g:netrw_dirhist_2='/Users/enjalot/lever/hire/node_modules/lever-data/node_modules/solr-client/lib'
