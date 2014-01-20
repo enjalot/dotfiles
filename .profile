@@ -11,6 +11,9 @@ export PATH=/usr/local/opt/ruby/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+ssh-add ~/.ssh/enjamini
+ssh-add ~/.ssh/id_enj_mba
+ssh-add ~/.ssh/lever-ec2
 ##alias 'ssh'='~/dotfiles/sshcolor.bash'
 alias 'vim'='mvim -v'
 
@@ -22,14 +25,45 @@ alias 'sshk'='ssh ubuntu@50.19.108.27 -i .ssh/kijani.pem'
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias gst='git status'
 
+# ampline
+# give me variable saving!
+alias gs='amp -p "...(.*)$" git status -s'
+alias gbr='amp -p " ? (?:remotes\\/)?(?:origin\\/)?(.*)$" git branch' # supports -a, -r flags
+
+alias l='CLICOLOR_FORCE=1 amp -p "(.*)" ls -1'
+alias find='amp -p "(.*)" find'
+# give me variable expansion!
+alias ga='amp git add'
+alias grm='amp git rm'
+alias gco='amp git checkout'
+alias gd='amp git diff'
+alias gdh='amp git diff HEAD'
+alias gunstage='amp git unstage'
+alias cat='amp cat'
+alias less='amp less'
+alias mocha='amp mocha'
+
 #lever
 
 alias 'sl'='cd ~/lever/chef-repo;knife ec2 server list'
 alias 'lv'='cd ~/lever/cloud/dev;vagrant ssh'
 alias 'tailall'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -iP -t0 -h /dev/stdin sudo tail -fn 100 /var/log/lever/hire.log"
-alias 'tailallupload'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -iP -t0 -h /dev/stdin sudo tail -fn 300 /var/log/lever/upload.log"
+alias 'tailallupload'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo tail -fn 300 /var/log/lever/upload.log"
 
-alias 'grepallupload'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -iP -t0 -h /dev/stdin sudo grep -irn '$1' /var/log/lever/upload.log"
+alias 'vrestart'='sudo /Library/StartupItems/VirtualBox/VirtualBox restart'
+
+# use like grepall "my search" /var/log/lever/upload.log
+#alias 'grepall'="cd $HOME/lever/chef-repo; knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo grep -irn '$1' '$2'"
+#alias 'testall'="cd $HOME/lever/chef-repo; knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin echo 'one $1' 'two $2'"
+
+grepall() {
+  cd $HOME/lever/chef-repo;
+  search=$1
+  file=$2
+  #knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo grep -irn "$1" "$2"
+  knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo grep -irn "'$search'" "$file"
+}
+#alias 'grepallupload'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo grep -irn '$1' /var/log/lever/upload.log"
 
 #vi editing mode!
 set -o vi
