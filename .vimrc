@@ -73,7 +73,7 @@ noremap <C-k> <PageUp>
 
 
 "use relative line numbers
-set relativenumber
+"set relativenumber
 set undofile
 
 "fix up searching
