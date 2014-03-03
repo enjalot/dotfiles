@@ -19,7 +19,10 @@ alias 'vim'='mvim -v'
 
 alias 'sshe'='ssh enjalot@enja.org'
 alias 'sshtrib'='ssh ubuntu@tributary.io -i ~/.ssh/enjalot_tributary.pem'
+alias 'sshslurp'='ssh ubuntu@54.235.119.124 -i ~/.ssh/enjalot_tributary.pem'
+
 alias 'sshk'='ssh ubuntu@50.19.108.27 -i .ssh/kijani.pem'
+alias 'pys'='python -m SimpleHTTPServer'
 
 #git aliases
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
