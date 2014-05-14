@@ -1,8 +1,10 @@
+
 ulimit -n 10000
 
 export PATH=/usr/local/bin:$PATH
 #for locally installed programs (like mvim)
 export PATH=$HOME/code/install:$PATH
+export PATH=$HOME/anaconda/bin:$PATH
 #lever cli
 export PATH=$HOME/lever/cli/bin:$PATH
 #ruby gems
@@ -76,3 +78,8 @@ source ~/.prompt.bash
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# added by Anaconda 1.9.2 installer
+export PATH="/Users/enjalot/anaconda/bin:$PATH"
+
+source ~/lever/scripts/bash/.lever-profile
