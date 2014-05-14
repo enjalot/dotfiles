@@ -47,13 +47,15 @@ alias less='amp less'
 alias mocha='amp mocha'
 
 #lever
-
+alias 'pnpm'='NPM_CONFIG_USERCONFIG=~/.npmrc-public npm'
 alias 'sl'='cd ~/lever/chef-repo;knife ec2 server list'
 alias 'lv'='cd ~/lever/cloud/dev;vagrant ssh'
 alias 'tailall'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -iP -t0 -h /dev/stdin sudo tail -fn 100 /var/log/lever/hire.log"
 alias 'tailallupload'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo tail -fn 300 /var/log/lever/upload.log"
 
 alias 'vrestart'='sudo /Library/StartupItems/VirtualBox/VirtualBox restart'
+
+alias 'lpull'='~/lever/scripts/bash/l-pull'
 
 # use like grepall "my search" /var/log/lever/upload.log
 #alias 'grepall'="cd $HOME/lever/chef-repo; knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo grep -irn '$1' '$2'"
