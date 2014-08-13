@@ -1,8 +1,10 @@
+
 ulimit -n 10000
 
 export PATH=/usr/local/bin:$PATH
 #for locally installed programs (like mvim)
 export PATH=$HOME/code/install:$PATH
+export PATH=$HOME/anaconda/bin:$PATH
 #lever cli
 export PATH=$HOME/lever/cli/bin:$PATH
 #ruby gems
@@ -50,17 +52,6 @@ alias cat='amp cat'
 alias less='amp less'
 alias mocha='amp mocha'
 
-#lever
-alias 'pnpm'='NPM_CONFIG_USERCONFIG=~/.npmrc-public npm'
-alias 'sl'='cd ~/lever/chef-repo;knife ec2 server list'
-alias 'lv'='cd ~/lever/cloud/dev;vagrant ssh'
-alias 'tailall'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -iP -t0 -h /dev/stdin sudo tail -fn 100 /var/log/lever/hire.log"
-alias 'tailallupload'="knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo tail -fn 300 /var/log/lever/upload.log"
-
-alias 'vrestart'='sudo /Library/StartupItems/VirtualBox/VirtualBox restart'
-
-alias 'lpull'='~/lever/scripts/bash/l-pull'
-
 # use like grepall "my search" /var/log/lever/upload.log
 #alias 'grepall'="cd $HOME/lever/chef-repo; knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo grep -irn '$1' '$2'"
 #alias 'testall'="cd $HOME/lever/chef-repo; knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin echo 'one $1' 'two $2'"
@@ -85,4 +76,8 @@ source ~/lever/scripts/bash/.lever-profile
 export PATH="/usr/local/heroku/bin:$PATH"
 source $(brew --prefix nvm)/nvm.sh
 
+# added by Anaconda 1.9.2 installer
+export PATH="/Users/enjalot/anaconda/bin:$PATH"
+
 clear
+
