@@ -20,9 +20,13 @@ alias 'vim'='mvim -v'
 alias 'sshe'='ssh enjalot@enja.org'
 alias 'sshtrib'='ssh ubuntu@tributary.io -i ~/.ssh/enjalot_tributary.pem'
 alias 'sshslurp'='ssh ubuntu@54.235.119.124 -i ~/.ssh/enjalot_tributary.pem'
-
 alias 'sshk'='ssh ubuntu@50.19.108.27 -i .ssh/kijani.pem'
+
 alias 'pys'='python -m SimpleHTTPServer'
+
+# server connection aliases
+alias 'ldb2'='ssh enjalot@mongo-prod.s.lever.co -p 22'
+alias 'lrep'='ssh enjalot@54.184.8.65 -p 222'
 
 #git aliases
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
@@ -75,6 +79,10 @@ set -o vi
 
 source ~/.git-completion.bash
 source ~/.prompt.bash
+source ~/lever/scripts/bash/.lever-profile
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+source $(brew --prefix nvm)/nvm.sh
+
+clear
