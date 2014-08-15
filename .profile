@@ -26,10 +26,15 @@ alias 'sshslurp'='ssh ubuntu@54.235.119.124 -i ~/.ssh/enjalot_tributary.pem'
 alias 'scpslurp'='scp -i ~/.ssh/enjalot_tributary.pem ubuntu@54.235.119.124:$1'
 
 alias 'sshk'='ssh ubuntu@50.19.108.27 -i .ssh/kijani.pem'
+
 alias 'pys'='python -m SimpleHTTPServer'
 
 export DOCKER_HOST=tcp://127.0.0.1:4243
 alias docker="sudo docker -H $DOCKER_HOST"
+
+# server connection aliases
+alias 'ldb2'='ssh enjalot@mongo-prod.s.lever.co -p 22'
+alias 'lrep'='ssh enjalot@54.184.8.65 -p 222'
 
 #git aliases
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
@@ -71,13 +76,14 @@ set -o vi
 
 source ~/.git-completion.bash
 source ~/.prompt.bash
+source ~/lever/scripts/bash/.lever-profile
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+source $(brew --prefix nvm)/nvm.sh
 
 # added by Anaconda 1.9.2 installer
 export PATH="/Users/enjalot/anaconda/bin:$PATH"
 
-source $(brew --prefix nvm)/nvm.sh
-source ~/lever/scripts/bash/.lever-profile
+clear
 
