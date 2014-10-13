@@ -15,7 +15,7 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ssh-add ~/.ssh/enjamini
 ssh-add ~/.ssh/id_enj_mba
-ssh-add ~/.ssh/lever-ec2
+#ssh-add ~/.ssh/lever-ec2
 ##alias 'ssh'='~/dotfiles/sshcolor.bash'
 alias 'vim'='mvim -v'
 
@@ -32,21 +32,21 @@ alias gst='git status'
 
 # ampline
 # give me variable saving!
-alias gs='amp -p "...(.*)$" git status -s'
-alias gbr='amp -p " ? (?:remotes\\/)?(?:origin\\/)?(.*)$" git branch' # supports -a, -r flags
+#alias gs='amp -p "...(.*)$" git status -s'
+#alias gbr='amp -p " ? (?:remotes\\/)?(?:origin\\/)?(.*)$" git branch' # supports -a, -r flags
 
-alias l='CLICOLOR_FORCE=1 amp -p "(.*)" ls -1'
-alias find='amp -p "(.*)" find'
+#alias l='CLICOLOR_FORCE=1 amp -p "(.*)" ls -1'
+#alias find='amp -p "(.*)" find'
 # give me variable expansion!
-alias ga='amp git add'
-alias grm='amp git rm'
-alias gco='amp git checkout'
-alias gd='amp git diff'
-alias gdh='amp git diff HEAD'
-alias gunstage='amp git unstage'
-alias cat='amp cat'
-alias less='amp less'
-alias mocha='amp mocha'
+#alias ga='amp git add'
+#alias grm='amp git rm'
+#alias gco='amp git checkout'
+#alias gd='amp git diff'
+#alias gdh='amp git diff HEAD'
+#alias gunstage='amp git unstage'
+#alias cat='amp cat'
+#alias less='amp less'
+#alias mocha='amp mocha'
 
 # use like grepall "my search" /var/log/lever/upload.log
 #alias 'grepall'="cd $HOME/lever/chef-repo; knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo grep -irn '$1' '$2'"
@@ -74,3 +74,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/Users/enjalot/anaconda/bin:$PATH"
 
 source ~/lever/scripts/bash/.lever-profile
+clear
