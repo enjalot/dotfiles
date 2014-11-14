@@ -18,7 +18,7 @@ ssh-add ~/.ssh/enjamini
 ssh-add ~/.ssh/id_enj_mba
 #ssh-add ~/.ssh/lever-ec2
 ##alias 'ssh'='~/dotfiles/sshcolor.bash'
-alias 'vim'='mvim -v'
+##alias 'vim'='mvim -v'
 
 alias 'sshe'='ssh enjalot@enja.org'
 alias 'sshtrib'='ssh ubuntu@tributary.io -i ~/.ssh/enjalot_tributary.pem'
@@ -29,8 +29,9 @@ alias 'sshk'='ssh ubuntu@50.19.108.27 -i .ssh/kijani.pem'
 
 alias 'pys'='python -m SimpleHTTPServer'
 
-export DOCKER_HOST=tcp://127.0.0.1:4243
-alias docker="sudo docker -H $DOCKER_HOST"
+$(boot2docker shellinit)
+#export DOCKER_HOST=tcp://127.0.0.1:4243
+#alias docker="sudo docker -H $DOCKER_HOST"
 
 # server connection aliases
 alias 'ldb2'='ssh enjalot@mongo-prod.s.lever.co -p 22'
@@ -74,8 +75,11 @@ grepall() {
 #vi editing mode!
 set -o vi
 
-source ~/.git-completion.bash
-source ~/.prompt.bash
+# nice colors for git repos in the command line
+source ~/dotfiles/git-completion.bash
+source ~/dotfiles/prompt.bash
+
+# lever specific aliases
 source ~/lever/scripts/bash/.lever-profile
 
 ### Added by the Heroku Toolbelt
