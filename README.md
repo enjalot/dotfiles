@@ -41,6 +41,30 @@ git config --global core.excludesfile '~/dotfiles/.gitignore_global'
 ```
 
 
+## Sublime Text 3
+
+### command line tool (subl)
+https://www.sublimetext.com/docs/3/osx_command_line.html
+```
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+```
+
+### packages
+install package control:  
+https://sublime.wbond.net/installation
+
+packages:
+```
+Better Coffeescript
+Vintageous
+```
+
+### fix key repeat
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+
+## linking settings
+TODO
+
 
 tmux session saving
 http://blog.edsantiago.com/articles/tmux-session-preserve/
