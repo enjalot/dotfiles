@@ -60,7 +60,9 @@ Vintageous
 ```
 
 ### fix key repeat
+```
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+```
 
 ## linking settings
 TODO
