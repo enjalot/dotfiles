@@ -34,6 +34,12 @@ source ~/dotfiles/git-completion.bash
 source ~/dotfiles/prompt.bash
 ```
 
+## global git ignore
+ignore certain things (like vim's temp files) by default
+```
+git config --global core.excludesfile '~/dotfiles/.gitignore_global'
+```
+
 
 
 tmux session saving
