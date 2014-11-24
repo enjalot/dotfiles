@@ -20,12 +20,13 @@ ssh-add ~/.ssh/lever-ec2
 ##alias 'ssh'='~/dotfiles/sshcolor.bash'
 alias 'vim'='mvim -v'
 
-alias 'sshe'='ssh enjalot@enja.org'
+alias 'sshe'='ssh enjalot@enja.org -i ~/.ssh/enjahova-aws'
 alias 'sshtrib'='ssh ubuntu@tributary.io -i ~/.ssh/enjalot_tributary.pem'
 alias 'sshslurp'='ssh ubuntu@54.235.119.124 -i ~/.ssh/enjalot_tributary.pem'
 alias 'scpslurp'='scp -i ~/.ssh/enjalot_tributary.pem ubuntu@54.235.119.124:$1'
 
-alias 'sshk'='ssh ubuntu@50.19.108.27 -i .ssh/kijani.pem'
+alias 'sshk'='ssh ubuntu@50.19.108.27 -i ~/.ssh/kijani.pem'
+alias 'sshdb'='ssh ec2-user@54.82.84.135 -i ~/.ssh/kijani.pem'
 
 alias 'pys'='python -m SimpleHTTPServer'
 
