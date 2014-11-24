@@ -16,9 +16,9 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ssh-add ~/.ssh/enjamini
 ssh-add ~/.ssh/id_enj_mba
-ssh-add ~/.ssh/lever-ec2
+#ssh-add ~/.ssh/lever-ec2
 ##alias 'ssh'='~/dotfiles/sshcolor.bash'
-alias 'vim'='mvim -v'
+##alias 'vim'='mvim -v'
 
 alias 'sshe'='ssh enjalot@enja.org -i ~/.ssh/enjahova-aws'
 alias 'sshtrib'='ssh ubuntu@tributary.io -i ~/.ssh/enjalot_tributary.pem'
@@ -30,8 +30,9 @@ alias 'sshdb'='ssh ec2-user@54.82.84.135 -i ~/.ssh/kijani.pem'
 
 alias 'pys'='python -m SimpleHTTPServer'
 
-export DOCKER_HOST=tcp://127.0.0.1:4243
-alias docker="sudo docker -H $DOCKER_HOST"
+$(boot2docker shellinit)
+#export DOCKER_HOST=tcp://127.0.0.1:4243
+#alias docker="sudo docker -H $DOCKER_HOST"
 
 # server connection aliases
 alias 'ldb2'='ssh enjalot@mongo-prod.s.lever.co -p 22'
@@ -43,21 +44,21 @@ alias gst='git status'
 
 # ampline
 # give me variable saving!
-alias gs='amp -p "...(.*)$" git status -s'
-alias gbr='amp -p " ? (?:remotes\\/)?(?:origin\\/)?(.*)$" git branch' # supports -a, -r flags
+#alias gs='amp -p "...(.*)$" git status -s'
+#alias gbr='amp -p " ? (?:remotes\\/)?(?:origin\\/)?(.*)$" git branch' # supports -a, -r flags
 
-alias l='CLICOLOR_FORCE=1 amp -p "(.*)" ls -1'
-alias find='amp -p "(.*)" find'
+#alias l='CLICOLOR_FORCE=1 amp -p "(.*)" ls -1'
+#alias find='amp -p "(.*)" find'
 # give me variable expansion!
-alias ga='amp git add'
-alias grm='amp git rm'
-alias gco='amp git checkout'
-alias gd='amp git diff'
-alias gdh='amp git diff HEAD'
-alias gunstage='amp git unstage'
-alias cat='amp cat'
-alias less='amp less'
-alias mocha='amp mocha'
+#alias ga='amp git add'
+#alias grm='amp git rm'
+#alias gco='amp git checkout'
+#alias gd='amp git diff'
+#alias gdh='amp git diff HEAD'
+#alias gunstage='amp git unstage'
+#alias cat='amp cat'
+#alias less='amp less'
+#alias mocha='amp mocha'
 
 # use like grepall "my search" /var/log/lever/upload.log
 #alias 'grepall'="cd $HOME/lever/chef-repo; knife search node 'chef_environment:prod AND role:frontend' -i | grep -vE '(^$)|(found$)' | sed s/$/.s.lever.co/ | pssh -l enjalot -iP -t0 -h /dev/stdin sudo grep -irn '$1' '$2'"
@@ -75,8 +76,11 @@ grepall() {
 #vi editing mode!
 set -o vi
 
-source ~/.git-completion.bash
-source ~/.prompt.bash
+# nice colors for git repos in the command line
+source ~/dotfiles/git-completion.bash
+source ~/dotfiles/prompt.bash
+
+# lever specific aliases
 source ~/lever/scripts/bash/.lever-profile
 
 ### Added by the Heroku Toolbelt
@@ -87,4 +91,3 @@ source $(brew --prefix nvm)/nvm.sh
 export PATH="/Users/enjalot/anaconda/bin:$PATH"
 
 clear
-
