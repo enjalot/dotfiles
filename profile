@@ -4,11 +4,13 @@ ulimit -n 10000
 export PATH=/usr/local/bin:$PATH
 #for locally installed programs (like mvim)
 export PATH=$HOME/code/install:$PATH
-export PATH=$HOME/anaconda/bin:$PATH
 #lever cli
 export PATH=$HOME/lever/cli/bin:$PATH
 #ruby gems
 export PATH=/usr/local/opt/ruby/bin:$PATH
+
+export PYTHONPATH="$HOME/code/others/caffe/distribute/python:$PYTHONPATH"
+export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:/usr/local/lib:$HOME/code/others/caffe/distribute/lib:$HOME/anaconda/lib:$DYLD_FALLBACK_LIBRARY_PATH
 
 # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -81,7 +83,7 @@ source ~/dotfiles/git-completion.bash
 source ~/dotfiles/prompt.bash
 
 # lever specific aliases
-source ~/lever/scripts/bash/.lever-profile
+source ~/lever/bash/lever-profile
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -89,5 +91,6 @@ source $(brew --prefix nvm)/nvm.sh
 
 # added by Anaconda 1.9.2 installer
 export PATH="/Users/enjalot/anaconda/bin:$PATH"
+
 
 clear
