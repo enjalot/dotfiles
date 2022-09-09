@@ -18,6 +18,18 @@ ln -s dotfiles/vimrc ~/.vimrc
 ln -s dotfiles/inputrc ~/.inputrc
 ```
 
+
+## global git ignore
+ignore certain things (like vim's temp files) by default
+```
+git config --global core.excludesfile '~/dotfiles/.gitignore_global'
+```
+
+## fig
+https://fig.io/
+
+# DEPRECATED
+
 ## install vundle
 https://github.com/gmarik/vundle
 
@@ -33,42 +45,4 @@ you can see in `profile` how we accomplish
 source ~/dotfiles/git-completion.bash
 source ~/dotfiles/prompt.bash
 ```
-
-## global git ignore
-ignore certain things (like vim's temp files) by default
-```
-git config --global core.excludesfile '~/dotfiles/.gitignore_global'
-```
-
-
-## Sublime Text 3
-
-### command line tool (subl)
-https://www.sublimetext.com/docs/3/osx_command_line.html
-```
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-```
-
-### packages
-install package control:  
-https://sublime.wbond.net/installation
-
-packages:
-```
-Better Coffeescript
-Vintageous
-```
-
-### fix key repeat
-```
-defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
-```
-
-## linking settings
-TODO
-
-
-tmux session saving
-http://blog.edsantiago.com/articles/tmux-session-preserve/
-https://gist.github.com/enjalot/5138865
 
