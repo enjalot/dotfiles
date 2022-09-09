@@ -1,3 +1,7 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zprofile.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zprofile.pre.zsh"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ulimit -n 10000
 
@@ -22,3 +26,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 source $(brew --prefix nvm)/nvm.sh
 
 clear
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zprofile.post.zsh" ]] && builtin source "$HOME/.fig/shell/zprofile.post.zsh"
