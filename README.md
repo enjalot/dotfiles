@@ -15,8 +15,9 @@ gh auth login
 # get the dot files
 git clone https://github.com/enjalot/dotfiles.git
 
-# my bash and vim configuration
 ln -s dotfiles/profile ~/.zprofile
+
+# vim configuration
 ln -s dotfiles/vimrc ~/.vimrc
 
 # set vi mode
