@@ -19,6 +19,9 @@ ln -s dotfiles/profile ~/.zprofile
 
 # vim configuration
 ln -s dotfiles/vimrc ~/.vimrc
+# https://vimforvscode.com/enable-key-repeat-vim
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 # set vi mode
 ln -s dotfiles/inputrc ~/.inputrc

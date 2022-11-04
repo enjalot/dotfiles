@@ -1,2 +1,2 @@
-set completion-ignore-case on
-set -o vi
+# set completion-ignore-case on
+# set -o vi

@@ -7,7 +7,7 @@ ulimit -n 10000
 
 export PATH=/usr/local/bin:$PATH
 
-alias 'pys'='python3 -m SimpleHTTPServer'
+alias 'pys'='python3 -m http.server'
 
 #git aliases
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
