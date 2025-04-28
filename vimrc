@@ -30,7 +30,7 @@ set iskeyword-=_
 "makes copy and paste work with system clipboard, yy, p etc
 set clipboard=unnamed
 
-call pathogen#infect()
+" call pathogen#infect()
 
 "remap autocomplete cycling
 "inoremap ` <C-n>
@@ -122,15 +122,15 @@ let fortran_free_source=1
  set nocompatible               " be iMproved
  filetype off                   " required!
 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
- Bundle 'gmarik/vundle'
+" Bundle 'gmarik/vundle'
 
 " My Bundles here:
- Bundle 'wakatime/vim-wakatime'
+" Bundle 'wakatime/vim-wakatime'
 
 " original repos on github
 "Bundle 'tpope/vim-fugitive'
